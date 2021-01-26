@@ -19,7 +19,7 @@ def Fnc_GetImg(img):
             r,g,b = pic.getpixel((x,y))
             rgb = [r,g,b]
             pixelsList.append(rgb)
-            com.personalLogger(rgb,"ENCODE_IN")
+            #com.personalLogger(rgb,"ENCODE_IN")
 
     return pixelsList, pic.width, pic.height
 
@@ -52,7 +52,7 @@ def Fnc_SaveImage(nom,sufix,width,height,pixels):
         
         pixel = (pixel[0],pixel[1],pixel[2])
         picColor.putpixel((x,y),pixel)
-        com.personalLogger(pixel,"ENCODE_OUT")
+        #com.personalLogger(pixel,"ENCODE_OUT")
         x+=1
         if (x >= width):
             x=0
@@ -61,18 +61,18 @@ def Fnc_SaveImage(nom,sufix,width,height,pixels):
     picColor.save(imgDest)
 
 def replaceImg(text,img):
-    com.personalLogger("Texte a Encodé","ENCODE_TEXT","Replace")
-    com.personalLogger("Pixel avant entré dans encode.py \n","ENCODE_IN","Replace")
-    com.personalLogger("Pixel apres entreé dans encode.py \n","ENCODE_OUT","Replace")
+    #com.personalLogger("Texte a Encodé","ENCODE_TEXT","Replace")
+    #com.personalLogger("Pixel avant entré dans encode.py \n","ENCODE_IN","Replace")
+    #com.personalLogger("Pixel apres entreé dans encode.py \n","ENCODE_OUT","Replace")
     
     print(f"text a encoder (ASCII): {text}\n")
-    com.personalLogger(f"text a encoder (ASCII): {text}\n","ENCODE_TEXT")
+    #com.personalLogger(f"text a encoder (ASCII): {text}\n","ENCODE_TEXT")
     idx = 0
     newIMG = []
     pixelList = []
     textToBinary = convertTextToBinary(text)
     print(f"text a encoder (BINAI): {textToBinary}\n")
-    com.personalLogger(f"text a encoder (BINAI): {textToBinary}\n","ENCODE_TEXT")
+    #com.personalLogger(f"text a encoder (BINAI): {textToBinary}\n","ENCODE_TEXT")
     imgObj = Fnc_GetImg(img)
     imgDecimal = imgObj[0]
     textToBinaryLen = len(textToBinary)
