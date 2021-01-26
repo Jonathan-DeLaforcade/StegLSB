@@ -1,6 +1,6 @@
 # StegLSB
 
-## Fonction Fnc_GetImg
+## Fonction getImg
 - DESC: get pixellist of image
 - IN: PathToImage
 - OUT: PixelsList, ImageWidth, ImageHeight
