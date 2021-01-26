@@ -10,7 +10,7 @@ from PIL import Image
 #   - pixellist ==> liste des pixels de l'image (array of tuple)
 #   - pic.width ==> largeur de l'image en pixel (number)
 #   - pic.height ==> hauteur de l'image en pixel (number)
-def Fnc_GetImg(img,rangeMin = 0 ,rangeMax = -1 ):
+def getImg(img,rangeMin = 0 ,rangeMax = -1 ):
     pixelsList = []
     
     pic = Image.open(img)
